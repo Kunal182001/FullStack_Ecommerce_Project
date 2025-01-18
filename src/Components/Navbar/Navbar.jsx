@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
 import logoimg from '../../assets/logo.png'
-// import logoimg from '../../assets/Logo2.png'
 import { CiSearch } from "react-icons/ci";
 import { CiShoppingCart } from "react-icons/ci";
 import { IoIosMenu } from "react-icons/io";
@@ -446,10 +445,8 @@ const Navbar = () => {
                             </>)}
 
                     </div>
-                </div>
-
-                {mobview &&
-                    <div onClick={() => { setmobview(false) }} className='w-full h-screen  top-0 z-[101] absolute inset-0 bg-black bg-opacity-30 overflow-hidden'>
+                    {mobview &&
+                    <div onClick={() => { setmobview(false) }} className='w-full h-screen  left-0 z-[101] absolute inset-0 bg-black bg-opacity-30 overflow-hidden'>
                         <div className='w-[70%] flex flex-col h-screen items-start bg-white z-[102] transition-transform duration-300 ease-in-out transform translate-x-0
                          bg-[url("https://media.istockphoto.com/id/2063511115/photo/marble-abstract-christmas-white-gray-grunge-texture-wave-pattern-snow-ice-floe-hill-silver.jpg?s=2048x2048&w=is&k=20&c=EXO1CCa6BGGc0SGxaN493yv2S2TSq2lPX9Lvy9Y0Ktk=")]'>
                             <img className='w-full h-[200px]'
@@ -500,6 +497,9 @@ const Navbar = () => {
                             </div>
                         </div>
                     </div>}
+                </div>
+
+                
             </div>
 
             {/* State Select Drop Down */}

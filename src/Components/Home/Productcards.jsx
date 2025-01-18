@@ -41,8 +41,8 @@ const Productcards = ({ id, src, name, description, techData, brand, categorynam
       });
     }
   }, [])
-  function handlepreview() {
-
+  function handlepreview(e) {
+    e.preventDefault();
     setPreview(true);
   }
   function closepreview() {
@@ -66,7 +66,8 @@ const Productcards = ({ id, src, name, description, techData, brand, categorynam
   }
 
   //Add to WishList
-  const addtoWishlist = async () => {
+  const addtoWishlist = async (e) => {
+    e.preventDefault();
     if (addtowishlist) {
       deleteData(`/api/Wishlist/product/${id}`)
         .then((res) => {
@@ -109,7 +110,8 @@ const Productcards = ({ id, src, name, description, techData, brand, categorynam
   return (
     <>
 
-      <div
+      <NavLink
+          to={`/product/${id}`}
         key={id}
         onMouseEnter={() => { setincard(id) }}
         onMouseLeave={() => { setincard(null) }}
@@ -170,7 +172,7 @@ const Productcards = ({ id, src, name, description, techData, brand, categorynam
             onclose={closepreview}
           />
         )}
-      </div>
+      </NavLink>
 
 
     </>
