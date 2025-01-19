@@ -219,7 +219,8 @@ const Navbar = () => {
                 {/* Container for width 90% of screen */}
                 <div className="w-[90%] hidden md:flex flex-col items-center relative">
                     {/* BOX1 */}
-                    <div className="w-full flex flex-col sm:flex-row justify-between items-center mt-5 gap-5 sm:gap-0">
+                    <div className='w-full bg-white fixed top-0 flex justify-center items-center z-[103]'>
+                    <div className="w-[90%] flex flex-col sm:flex-row justify-between  bg-white items-center p-5 gap-5 sm:gap-0">
                         <NavLink to="/">
                             <img src={logoimg} className="w-[80px] sm:w-[100px] cursor-pointer ml-4" />
                         </NavLink>
@@ -329,8 +330,9 @@ const Navbar = () => {
                             </NavLink>
                         </div>
                     </div>
+                    </div>
                     {/* BOX2 */}
-                    <div className="w-full  flex flex-col sm:flex-row justify-between items-center mt-8 gap-4 sm:gap-0">
+                    <div className="w-full  flex flex-col sm:flex-row justify-between items-center mt-[100px] gap-4 sm:gap-0">
                         {/* Category */}
 
                         <div onClick={handlecategorey} className="md:w-[14%] sm:w-full h-[40px] z-[70] bg-blue-800  rounded-full gap-2 text-white flex justify-center items-center p-5 cursor-pointer relative">
